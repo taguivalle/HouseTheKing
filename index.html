@@ -6,14 +6,16 @@
     <!-- Esta etiqueta nos permite que se vea en un dispositivo diferente al de un pc. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Otra etiqueta muy importante a tener en cuenta: -->
-    <meta name="description" content="Página web de casa el rey">
-    <title>Casa el Rey</title>
+    <meta name="description" content="Galería de Arte - Venta de arte antiguo, contemporáneo y actual">
+    <meta name="keywords" content="arte, galería, ventas, arte antiguo, arte contemporáneo, joyas, muebles, pinturas">
+    <meta name="author" content="Héctor Gustavo Vallejo Espinosa">
+    <title>Galería de Arte Casa el Rey</title>
     <!-- Con este link se inserta el icono en el título de la pagina "casa el rey. " 
     https://imagen.online-convert.com/es/convertir/png-a-ico. -->
     <link rel="shortcut icon" href="icons/ElRey.ico" type="image/x-icon">
     <!-- Los preloads nos permite recargar más rápidamente. Para este caso de normalize. -->
-    <link rel="preload" href="css/normalize.css" as="css" />
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preload" href="styles/normalize.css" as="css" />
+    <link rel="stylesheet" href="styles/normalize.css">
     <!-- Este es el preload del google font. -->
     <link rel="preload" href="https://fonts.googleapis.com" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,167 +27,608 @@
         crossorigin="crossorigin" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
     <!-- Los preloads nos permite recargar más rápidamente. Para este caso de los estilos. -->
-    <link rel="preload" href="css/styles.css" crossorigin="crossorigin" as="css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preload" href="styles/estilos.css" crossorigin="crossorigin" as="css">
+    <link rel="stylesheet" href="styles/estilos.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- El prefetch nos permite llevar la siguiente página que esperaríamos (Una especie de intuición) que el usuario 
     visite más rápidamente y/o para darle una mejor experiencia. (Google analytics) -->
-    <link rel="prefetch" href="index.html" as="document">
+    <link rel="prefetch" href="styles/estilos.css" as="document">
+    <link rel="prefetch" href="styles/normaliza.css" as="document">
+
 </head>
 <!-- Vamos a crear el header. -->
-<header class="header">
-    <!-- Aquí vamos crear la barra de navegación dentro de un div. -->
-    <div class="contenedor">
-        <!-- Y aquí vamos a crear un enlace que nos redirija al index pero dentro de un div. -->
-        <div class="barra">
-            <!-- Esta línea es el enlace para el index. -->
-            <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
-                <h1 class="logo__nombre no-margin centrar-texto">Casa<span class="logo__bold">El Rey</span></h1>
-            </a>
-            <!-- Seguidamente en este tercer bloque vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
-            <nav class="navegacion">
-                <a href="pinturas.html" class="navegacion__enlace" target="_blank"
-                    rel="noopener noreferrer">Pinturas</a>
-                <a href="mobiliarios.html" class="navegacion__enlace" target="_blank"
-                    rel="noopener noreferrer">Mobiliario</a>
-                <a href="objetos.html" class="navegacion__enlace" target="_blank" rel="noopener noreferrer">Objetos</a>
-                <a href="joyas.html" class="navegacion__enlace" target="_blank" rel="noopener noreferrer">Joyas</a>
-                <a href="complementos.html" class="navegacion__enlace" target="_blank"
-                    rel="noopener noreferrer">Complementos</a>
-                <a href="productos.html" class="navegacion__enlace" target="_blank" rel="noopener noreferrer">Productos
-                    antiquax</a>
-            </nav>
-        </div>
-    </div>
-    <!-- Vamos a crear el título que va a ser el hijo del header dentro de una etiqueta div. Además utilizamos BEM. -->
-    <div class="header__text">
-        <h2 class="no-margin">Casa el Rey con algunos Consejos y Cursos</h2>
-        <p class="no-margin">Aprende de los expertos con los mejores consejos</p>
-    </div>
-</header>
+<!--Main Navigation-->
+<header>
+    <!-- Jumbotron -->
+    <div class="p-3 text-center bg-white border-bottom">
+        <div class="container">
+            <div class="row gy-3">
+                <!-- Left elements -->
+                <div class="col-lg-2 col-sm-4 col-4">
+                    <!-- <a href="https://mdbootstrap.com/" target="_blank" class="float-start">  -->
+                    <img src="assets/img/logo.jpg" height="100" />
+                    </a>
+                </div>
+                <!-- Left elements -->
 
-<body>
-    <div class="contenedor contenido-principal">
-        <!-- Aquí vamos a crear un main con una clase blog y este se convierte en el bloque para todo el blog. -->
-        <main class="blog">
-            <h3>Nuestro Blog</h3>
-            <!-- Aquí se encuentra las noticias de nuestro primer bloque por llamarlo así y se hace con una etiqueta 
-        article porque es una entrada de blog. -->
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <!-- Con esta etiqueta picture lo que nos permite es que en cualquier navegador por ejemplo, sino carga 
-                la imagen.webp entonces cargue el formato imagen.jpg. -->
-                    <picture>
-                        <source loading="lazy" srcset="accets/ElRey.jpg" type="accets/jpg">
-                        <!-- Aquí colocamos nuestra imagen del index. El loading= lazy nos sirve para que una vez que 
-                    lleguemos a ese elemento queremos que lo descargue. -->
-                        <img loading="lazy" src="accets/ElRey.jpg" alt="imagen El Rey">
-                    </picture>
+                <!-- Center elements -->
+                <div class="order-lg-last col-lg-5 col-sm-8 col-8">
+                    <div class="d-flex float-end">
+                        <a href="https://github.com/mdbootstrap/bootstrap-material-design"
+                            class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                                class="fas fa-user-alt m-1 me-md-2"></i>
+                            <p class="d-none d-md-block mb-0">Registrarse</p>
+                        </a>
+                        <!-- <a href="https://github.com/mdbootstrap/bootstrap-material-design"
+                            class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                                class="fas fa-heart m-1 me-md-2"></i> -->
+                        <p class="d-none d-md-block mb-0">Ingresar</p>
+                        </a>
+                        <!-- <a href="https://github.com/mdbootstrap/bootstrap-material-design"
+                            class="border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                                class="fas fa-shopping-cart m-1 me-md-2"></i> -->
+                        <p class="d-none d-md-block mb-0">Mis Deseos</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- Center elements -->
 
+                <!-- Right elements -->
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="input-group float-center">
+                        <div class="form-outline">
+                            <input type="search" id="form1" class="form-control" />
+                            <label class="form-label" for="form1">Buscar</label>
+                        </div>
+                        <button type="button" class="btn btn-primary shadow-0">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
-                <div class="entrada__contenido">
-                    <h3>Tipos de Arte</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
-                        fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum
-                        ratione
-                        incidunt natus quis possimus.</p>
-                    <!-- Este una especie de bloque modificador. -->
-                    <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
-                        Entrada</a>
-                </div>
-            </article><!-- Aquí finaliza la entrada del primer bloque. -->
-            <!-- Aquí se encuentra las noticias de nuestro segundo bloque por llamarlo así y se hace con una etiqueta 
-        article porque es una entrada de blog. -->
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <!-- Con esta etiqueta picture lo que nos permite es que en cualquier navegador por ejemplo, sino carga 
-                la imagen.webp entonces cargue el formato imagen.jpg. -->
-                    <picture>
-                        <source loading="lazy" srcset="accets/1.jpg" type="image/webp">
-                        <!-- Aquí colocamos nuestra imagen del blog. El loading= lazy nos sirve para que una vez que 
-                    lleguemos a ese elemento queremos que lo descargue. -->
-                        <img loading="lazy" src="accets/1.jpg" alt="imagen accets">
-                    </picture>
-                </div>
-                <div class="entrada__contenido">
-                    <h3>Tres interesantes datos a tener en cuenta</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
-                        fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum
-                        ratione
-                        incidunt natus quis possimus.</p>
-                    <!-- Este una especie de bloque modificador. -->
-                    <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
-                        Entrada</a>
-                </div>
-            </article><!-- Aquí finaliza la segunda entrada del bloque. -->
-            <!-- Aquí se encuentra las noticias de nuestro tercer bloque por llamarlo así y se hace con una etiqueta 
-        article porque es una entrada de blog. -->
-            <article class="entrada">
-                <div class="entrada__imagen">
-                    <!-- Con esta etiqueta picture lo que nos permite es que en cualquier navegador por ejemplo, sino carga 
-                la imagen.webp entonces cargue el formato imagen.jpg. -->
-                    <picture>
-                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
-                        <!-- Aquí colocamos nuestra imagen del tercer blog. El loading= lazy nos sirve para que una vez que 
-                    lleguemos a ese elemento queremos que lo descargue. -->
-                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
-                    </picture>
-                </div>
-                <div class="entrada__contenido">
-                    <h3>Beneficios del Café</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur itaque quas unde
-                        fugit molestias aliquid enim velit, in voluptates accusamus veritatis odio, explicabo illum
-                        ratione
-                        incidunt natus quis possimus.</p>
-                    <!-- Este una especie de bloque modificador. -->
-                    <a href="entrada" class="boton boton--primario" target="_blank" rel="noopener noreferrer">Leer
-                        Entrada</a>
-                </div>
-            </article><!-- Aquí finaliza la tercer entrada del bloque. -->
-        </main>
-        <!-- Y aquí vamos a tener un aside. -->
-        <aside class="sidebar">
-            <h3>Nuestros Cursos y Talleres</h3>
-            <!-- Aquí inicia la lista no ordenada (ul);es decir las listas agregan viñetas; a estas se les conoce como order 
-        list o lista no ordenada. -->
-            <ul class="cursos no-padding">
-                <li class="widget-curso">
-                    <h4 class="no-margin">Técnicas de Extracción de Café</h4>
-                    <p class="widget-curso__label">Precio: <span class="widget-curso__info">Gratis</span></p>
-                    <p class="widget-curso__label">Cupo: <span class="widget-curso__info">20</span></p>
-                    <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
-                        Información Sobre Nuestros Cursos</a>
-                </li>
-                <li class="widget-curso">
-                    <h4 class="no-margin">Cuatro recetas de Café para principiantes</h4>
-                    <p class="widget-curso__label">Precio <span class="widget-curso__info">Gratis</span></p>
-                    <p class="widget-curso__label">Cupo <span class="widget-curso__info">20</span></p>
-                    <a href="entrada" class="boton boton--secundario" target="_blank" rel="noopener noreferrer">Más
-                        Información</a>
-                </li>
-            </ul>
-        </aside>
-    </div>
-    <footer class="footer">
-        <div class="contenedor">
-            <!-- Gracias a los beneficios de BEM a que tiene esa separación de bloques y que cada bloque tiene esa separación
-        de estilos; entonces, podemos utilizar otros estilos en la navegación; por lo tanto copiamos y pegamos nuestra 
-        barra de navegación aquí en el footer. -->
-            <div class="barra">
-                <!-- Esta línea es el enlace para el index. -->
-                <a class="logo" href="index.html" target="_blank" rel="noopener noreferrer">
-                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">DeCafé</span></h1>
-                </a>
-                <!-- Seguidamente en este bloque del footer vamos a tener la barra de navegación. dentro de una etiqueta nav. -->
-                <nav class="navegacion">
-                    <a ref="nosotros.html" class="navegacion__enlace">Nosotros</a>
-                    <a ref="cursos.html" class="navegacion__enlace">Cursos</a>
-                    <a ref="contacto.html" class="navegacion__enlace">Contactos</a>
-                </nav>
+                <!-- Right elements -->
             </div>
         </div>
-    </footer>
-    <script src="js/modernizr.js"></script>
+    </div>
+    <!-- Jumbotron -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <!-- Container wrapper -->
+        <div class="container justify-content-center justify-content-md-between">
+            <!-- Toggle button -->
+            <button class="navbar-toggler border py-2 text-dark" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarLeftAlignExample" aria-controls="navbarLeftAlignExample" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarLeftAlignExample">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="complementos.html">Complementos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="joyas.html">Joyas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="mobiliarios.html">Mobiliarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="objetos.html">Objetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="pinturas.html">Pinturas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="productos.html">Productos</a>
+                    </li>
+                    <!-- Navbar dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                            data-mdb-toggle="dropdown" aria-expanded="false">
+                            Otros
+                        </a>
+                        <!-- Dropdown menu -->
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#">Action</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another action</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+    <!-- Jumbotron -->
+    <div class="bg-primary text-white py-5">
+        <div class="container py-5">
+            <h1>
+                las mejores obras de arte en nuestra tienda .<br />
+            </h1>
+            <p>
+                Arte antiguo con excelentes precios como el servicio.
+            </p>
+            <button type="button" class="btn btn-outline-light">
+                Conozca un poco más
+            </button>
+            <button type="button" class="btn btn-light shadow-0 text-primary pt-2 border border-white">
+                <span class="pt-1">Compre ahora</span>
+            </button>
+        </div>
+    </div>
+    <!-- Jumbotron -->
+</header>
+<!-- Products -->
+<section>
+    <div class="container my-5">
+        <header class="mb-4">
+            <h3>New products</h3>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/1.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">GoPro HERO6 4K Action Camera - Black</h5>
+                        <p class="card-text">$790.50</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/2.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Canon camera 20x zoom, Black color EOS 2000</h5>
+                        <p class="card-text">$320.00</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/3.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Xiaomi Redmi 8 Original Global Version 4GB</h5>
+                        <p class="card-text">$120.00</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/4.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Apple iPhone 12 Pro 6.1" RAM 6GB 512GB Unlocked</h5>
+                        <p class="card-text">$120.00</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/5.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Apple Watch Series 1 Sport Case 38mm Black</h5>
+                        <p class="card-text">$790.50</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/6.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">T-shirts with multiple colors, for men and lady</h5>
+                        <p class="card-text">$120.00</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/7.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Gaming Headset 32db Blackbuilt in mic</h5>
+                        <p class="card-text">$99.50</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border icon-hover px-2 pt-2"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
+                <div class="card w-100 my-2 shadow-2-strong">
+                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/8.webp" class="card-img-top"
+                        style="aspect-ratio: 1 / 1" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">T-shirts with multiple colors, for men and lady</h5>
+                        <p class="card-text">$120.00</p>
+                        <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
+                            <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
+                            <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
+                                    class="fas fa-heart fa-lg text-secondary px-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Products -->
+
+<!-- Feature -->
+<section class="mt-5" style="background-color: #f5f5f5;">
+    <div class="container text-dark pt-3">
+        <header class="pt-4 pb-3">
+            <h3>Why choose us</h3>
+        </header>
+
+        <div class="row mb-4">
+            <div class="col-lg-4 col-md-6">
+                <figure class="d-flex align-items-center mb-4">
+                    <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                        <i class="fas fa-camera-retro fa-2x fa-fw text-primary floating"></i>
+                    </span>
+                    <figcaption class="info">
+                        <h6 class="title">Reasonable prices</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                    </figcaption>
+                </figure>
+                <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+                <figure class="d-flex align-items-center mb-4">
+                    <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                        <i class="fas fa-star fa-2x fa-fw text-primary floating"></i>
+                    </span>
+                    <figcaption class="info">
+                        <h6 class="title">Best quality</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                    </figcaption>
+                </figure>
+                <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+                <figure class="d-flex align-items-center mb-4">
+                    <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                        <i class="fas fa-plane fa-2x fa-fw text-primary floating"></i>
+                    </span>
+                    <figcaption class="info">
+                        <h6 class="title">Worldwide shipping</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                    </figcaption>
+                </figure>
+                <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+                <figure class="d-flex align-items-center mb-4">
+                    <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                        <i class="fas fa-users fa-2x fa-fw text-primary floating"></i>
+                    </span>
+                    <figcaption class="info">
+                        <h6 class="title">Customer satisfaction</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                    </figcaption>
+                </figure>
+                <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+                <figure class="d-flex align-items-center mb-4">
+                    <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                        <i class="fas fa-thumbs-up fa-2x fa-fw text-primary floating"></i>
+                    </span>
+                    <figcaption class="info">
+                        <h6 class="title">Happy customers</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                    </figcaption>
+                </figure>
+                <!-- itemside // -->
+            </div>
+            <!-- col // -->
+            <div class="col-lg-4 col-md-6">
+                <figure class="d-flex align-items-center mb-4">
+                    <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+                        <i class="fas fa-box fa-2x fa-fw text-primary floating"></i>
+                    </span>
+                    <figcaption class="info">
+                        <h6 class="title">Thousand items</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                    </figcaption>
+                </figure>
+                <!-- itemside // -->
+            </div>
+            <!-- col // -->
+        </div>
+    </div>
+    <!-- container end.// -->
+</section>
+<!-- Feature -->
+
+<!-- Blog -->
+<section class="mt-5 mb-4">
+    <div class="container text-dark">
+        <header class="mb-4">
+            <h3>Blog posts</h3>
+        </header>
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <article>
+                    <a href="#" class="img-fluid">
+                        <img class="rounded w-100" src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/1.webp"
+                            style="object-fit: cover;" height="160" />
+                    </a>
+                    <div class="mt-2 text-muted small d-block mb-1">
+                        <span>
+                            <i class="fa fa-calendar-alt fa-sm"></i>
+                            23.12.2022
+                        </span>
+                        <a href="#">
+                            <h6 class="text-dark">How to promote brands</h6>
+                        </a>
+                        <p>When you enter into any new area of science, you almost reach</p>
+                    </div>
+                </article>
+            </div>
+            <!-- col.// -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <article>
+                    <a href="#" class="img-fluid">
+                        <img class="rounded w-100" src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/2.webp"
+                            style="object-fit: cover;" height="160" />
+                    </a>
+                    <div class="mt-2 text-muted small d-block mb-1">
+                        <span>
+                            <i class="fa fa-calendar-alt fa-sm"></i>
+                            13.12.2022
+                        </span>
+                        <a href="#">
+                            <h6 class="text-dark">How we handle shipping</h6>
+                        </a>
+                        <p>When you enter into any new area of science, you almost reach</p>
+                    </div>
+                </article>
+            </div>
+            <!-- col.// -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <article>
+                    <a href="#" class="img-fluid">
+                        <img class="rounded w-100" src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/3.webp"
+                            style="object-fit: cover;" height="160" />
+                    </a>
+                    <div class="mt-2 text-muted small d-block mb-1">
+                        <span>
+                            <i class="fa fa-calendar-alt fa-sm"></i>
+                            25.11.2022
+                        </span>
+                        <a href="#">
+                            <h6 class="text-dark">How to promote brands</h6>
+                        </a>
+                        <p>When you enter into any new area of science, you almost reach</p>
+                    </div>
+                </article>
+            </div>
+            <!-- col.// -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <article>
+                    <a href="#" class="img-fluid">
+                        <img class="rounded w-100" src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/4.webp"
+                            style="object-fit: cover;" height="160" />
+                    </a>
+                    <div class="mt-2 text-muted small d-block mb-1">
+                        <span>
+                            <i class="fa fa-calendar-alt fa-sm"></i>
+                            03.09.2022
+                        </span>
+                        <a href="#">
+                            <h6 class="text-dark">Success story of sellers</h6>
+                        </a>
+                        <p>When you enter into any new area of science, you almost reach</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog -->
+
+<!-- Footer -->
+<footer class="text-center text-lg-start text-muted mt-3" style="background-color: #f5f5f5;">
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start pt-4 pb-4">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-12 col-lg-3 col-sm-12 mb-2">
+                    <!-- Content -->
+                    <a href="https://mdbootstrap.com/" target="_blank" class="">
+                        <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" />
+                    </a>
+                    <p class="mt-2 text-dark">
+                        © 2023 Copyright: MDBootstrap.com
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <!-- Links -->
+                    <h6 class="text-uppercase text-dark fw-bold mb-2">
+                        Store
+                    </h6>
+                    <ul class="list-unstyled mb-4">
+                        <li><a class="text-muted" href="#">About us</a></li>
+                        <li><a class="text-muted" href="#">Find store</a></li>
+                        <li><a class="text-muted" href="#">Categories</a></li>
+                        <li><a class="text-muted" href="#">Blogs</a></li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <!-- Links -->
+                    <h6 class="text-uppercase text-dark fw-bold mb-2">
+                        Information
+                    </h6>
+                    <ul class="list-unstyled mb-4">
+                        <li><a class="text-muted" href="#">Help center</a></li>
+                        <li><a class="text-muted" href="#">Money refund</a></li>
+                        <li><a class="text-muted" href="#">Shipping info</a></li>
+                        <li><a class="text-muted" href="#">Refunds</a></li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-6 col-sm-4 col-lg-2">
+                    <!-- Links -->
+                    <h6 class="text-uppercase text-dark fw-bold mb-2">
+                        Support
+                    </h6>
+                    <ul class="list-unstyled mb-4">
+                        <li><a class="text-muted" href="#">Help center</a></li>
+                        <li><a class="text-muted" href="#">Documents</a></li>
+                        <li><a class="text-muted" href="#">Account restore</a></li>
+                        <li><a class="text-muted" href="#">My orders</a></li>
+                    </ul>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-12 col-sm-12 col-lg-3">
+                    <!-- Links -->
+                    <h6 class="text-uppercase text-dark fw-bold mb-2">Newsletter</h6>
+                    <p class="text-muted">Stay in touch with latest updates about our products and offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control border" placeholder="Email" aria-label="Email"
+                            aria-describedby="button-addon2" />
+                        <button class="btn btn-light border shadow-0" type="button" id="button-addon2"
+                            data-mdb-ripple-color="dark">
+                            Join
+                        </button>
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <div class="">
+        <div class="container">
+            <div class="d-flex justify-content-between py-4 border-top">
+                <!--- payment --->
+                <div>
+                    <i class="fab fa-lg fa-cc-visa text-dark"></i>
+                    <i class="fab fa-lg fa-cc-amex text-dark"></i>
+                    <i class="fab fa-lg fa-cc-mastercard text-dark"></i>
+                    <i class="fab fa-lg fa-cc-paypal text-dark"></i>
+                </div>
+                <!--- payment --->
+
+                <!--- language selector --->
+                <div class="dropdown dropup">
+                    <a class="dropdown-toggle text-dark" href="#" id="Dropdown" role="button" data-mdb-toggle="dropdown"
+                        aria-expanded="false"> <i class="flag-united-kingdom flag m-0 me-1"></i>English </a>
+
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="Dropdown">
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English <i
+                                    class="fa fa-check text-success ms-2"></i></a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Inicio</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-china flag"></i>Complementos</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-japan flag"></i>Joyas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-germany flag"></i>Mobiliarios</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-france flag"></i>Objetos</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-spain flag"></i>Pinturas</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#"><i class="flag-russia flag"></i>Productos</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--- language selector --->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer -->
+<script src="script.js"></script>
+<script src="js/modernizr.js"></script>
 </body>
 
 </html>
