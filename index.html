@@ -12,9 +12,10 @@
     <title>Galería de Arte Casa el Rey</title>
     <!-- Con este link se inserta el icono en el título de la pagina "casa el rey. " 
     https://imagen.online-convert.com/es/convertir/png-a-ico. -->
-    <link rel="shortcut icon" href="icons/ElRey.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/icons/ElRey.ico" type="image/x-icon">
     <!-- Los preloads nos permite recargar más rápidamente. Para este caso de normalize. -->
     <link rel="preload" href="styles/normalize.css" as="css" />
+    <link rel="prefetch" href="styles/normaliza.css" as="document">
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- Este es el preload del google font. -->
     <link rel="preload" href="https://fonts.googleapis.com" as="font">
@@ -26,15 +27,26 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
         crossorigin="crossorigin" as="font">
     <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap">
+    <!-- El prefetch nos permite llevar la siguiente página que esperaríamos (Una especie de intuición) que el usuario 
+        visite más rápidamente y/o para darle una mejor experiencia. (Google analytics) -->
+    <!-- hacemos lo mismo con el navbar le asignamos y stylesheet, un preload y in prefetch -->
+    <link rel="preload" href="navbar.css" crossorigin="crossorigin" as="css">
+    <link rel="prefetch" href="navbar.css" as="document">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <!-- Los preloads nos permite recargar más rápidamente. Para este caso de los estilos. -->
     <link rel="preload" href="styles/estilos.css" crossorigin="crossorigin" as="css">
-    <link rel="stylesheet" href="styles/estilos.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- El prefetch nos permite llevar la siguiente página que esperaríamos (Una especie de intuición) que el usuario 
-    visite más rápidamente y/o para darle una mejor experiencia. (Google analytics) -->
     <link rel="prefetch" href="styles/estilos.css" as="document">
-    <link rel="prefetch" href="styles/normaliza.css" as="document">
-
+    <link rel="stylesheet" href="styles/estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
 </head>
 <!-- Vamos a crear el header. -->
 <!--Main Navigation-->
@@ -45,8 +57,8 @@
             <div class="row gy-3">
                 <!-- Left elements -->
                 <div class="col-lg-2 col-sm-4 col-4">
-                    <!-- <a href="https://mdbootstrap.com/" target="_blank" class="float-start">  -->
-                    <img src="assets/img/logo.jpg" height="100" />
+                    <a href="index.html" target="_blank" class="float-start">
+                        <img src="assets/img/logo.jpg" height="50" />
                     </a>
                 </div>
                 <!-- Left elements -->
@@ -54,20 +66,16 @@
                 <!-- Center elements -->
                 <div class="order-lg-last col-lg-5 col-sm-8 col-8">
                     <div class="d-flex float-end">
-                        <a href="https://github.com/mdbootstrap/bootstrap-material-design"
-                            class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
+                        <a href="assets/img/ElRey.jpg" class="ElRey" target="_blank">Registro<i
                                 class="fas fa-user-alt m-1 me-md-2"></i>
-                            <p class="d-none d-md-block mb-0">Registrarse</p>
                         </a>
-                        <!-- <a href="https://github.com/mdbootstrap/bootstrap-material-design"
-                            class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
-                                class="fas fa-heart m-1 me-md-2"></i> -->
-                        <p class="d-none d-md-block mb-0">Ingresar</p>
+                        <a href="register.html" class="me-1 border rounded py-1 px-3 nav-link d-flex align-items-center"
+                            target="_blank"> <i class="fas fa-heart m-1 me-md-2"></i>
+                            <p class="d-none d-md-block mb-0">Ingresar</p>
                         </a>
-                        <!-- <a href="https://github.com/mdbootstrap/bootstrap-material-design"
-                            class="border rounded py-1 px-3 nav-link d-flex align-items-center" target="_blank"> <i
-                                class="fas fa-shopping-cart m-1 me-md-2"></i> -->
-                        <p class="d-none d-md-block mb-0">Mis Deseos</p>
+                        <a href="myWishes.html" class="border rounded py-1 px-3 nav-link d-flex align-items-center"
+                            target="_blank"> <i class="fas fa-shopping-cart m-1 me-md-2"></i>
+                            <p class="d-none d-md-block mb-0">Mis Deseos</p>
                         </a>
                     </div>
                 </div>
@@ -92,7 +100,7 @@
     <!-- Jumbotron -->
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar">
         <!-- Container wrapper -->
         <div class="container justify-content-center justify-content-md-between">
             <!-- Toggle button -->
@@ -107,29 +115,29 @@
                 <!-- Left links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="complementos.html">Complementos</a>
+                        <a class="nav-link" href="accesories.html">Complementos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="joyas.html">Joyas</a>
+                        <a class="nav-link" href="jewerlry.html">Joyas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="mobiliarios.html">Mobiliarios</a>
+                        <a class="nav-link" href="furniture.html">Mobiliarios</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="objetos.html">Objetos</a>
+                        <a class="nav-link" href="objects.html">Objetos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="pinturas.html">Pinturas</a>
+                        <a class="nav-link" href="paintings.html">Pinturas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="productos.html">Productos</a>
+                        <a class="nav-link" href="products.html">Productos</a>
                     </li>
                     <!-- Navbar dropdown -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link" href="others.html" id="navbarDropdown" role="button"
                             data-mdb-toggle="dropdown" aria-expanded="false">
                             Otros
                         </a>
@@ -179,17 +187,16 @@
 <section>
     <div class="container my-5">
         <header class="mb-4">
-            <h3>New products</h3>
+            <h3>Nuevos productos</h3>
         </header>
 
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 d-flex">
                 <div class="card w-100 my-2 shadow-2-strong">
-                    <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/1.webp" class="card-img-top"
-                        style="aspect-ratio: 1 / 1" />
+                    <img src="assets/img/ElRey.jpg" class="card-img-top" style="aspect-ratio: 1 / 1" />
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">GoPro HERO6 4K Action Camera - Black</h5>
-                        <p class="card-text">$790.50</p>
+                        <h5 class="card-title">Estatua Bisantina del siglo XIV</h5>
+                        <p class="card-text">€750.50</p>
                         <div class="card-footer d-flex align-items-end pt-3 px-0 pb-0 mt-auto">
                             <a href="#!" class="btn btn-primary shadow-0 me-1">Add to cart</a>
                             <a href="#!" class="btn btn-light border px-2 pt-2 icon-hover"><i
